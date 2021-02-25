@@ -50,7 +50,6 @@ Odoo.prototype.connect = function (cb) {
       if (response.error) {
         return cb(response.error, null);
       }
-      console.log(response.result.user_context)
 
       self.uid = response.result.uid;
       self.sid = res.headers['set-cookie'][0].split(';')[0];
